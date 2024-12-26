@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num=parseInt(prompt("Enter a number"));
+        var rem,sum=0,count=0,temp=num,n=num;
+        //first count no of digits
+        while(num!=0){
+            num=parseInt(num/10);
+            count++;
+        }
+        //performing the addition with count as power to each digit
+        while(n!=0){
+            rem=n%10;
+            sum+=rem**count;
+            n=parseInt(n/10);
+        }
+        if(temp==sum){
+            document.write(`${temp} is a armstrong number`);
+        }
+        else{
+            document.write(`${temp} is not a armstrong number`);
+        }
+    </script>
+</body>
+</html>
