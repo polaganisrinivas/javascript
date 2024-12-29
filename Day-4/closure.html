@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function counter(){
+            var count=0;
+            function inner(){
+                count++;
+                return count;
+            }
+            return inner;
+        }
+        var res=counter();
+        document.write(res());
+        //the counter goes on incrementing the count as many time we call the function hello
+        document.write("<br>"+res())
+        //comment the inner function and write the statemnts in the outer function..You will see the difference
+    </script>
+</body>
+</html>

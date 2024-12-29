@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[22,7,198,924,6,9,45];  
+        var small=arr[0],nextsmall=Infinity;
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]<small){
+                nextsmall=small;
+                small=arr[i];
+            }
+            else if(arr[i]<nextsmall && arr[i]!==small){
+                nextsmall=arr[i];
+            }
+        }
+        document.write(nextsmall);
+    </script>
+</body>
+</html>
