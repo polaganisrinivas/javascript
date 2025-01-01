@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var students = [
+            { name: 'John', age: 17 },
+            { name: 'Jane', age: 19 },
+            { name: 'Jack', age: 18 },
+        ];
+        var newarray=students.map((ele)=>{
+            return{
+                ...ele,
+                isAdult:ele.age>=18,
+            }
+        });
+        for(let i of newarray){
+            for(let a in i){
+                document.write(`${a}:${i[a]}`+"<br>");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

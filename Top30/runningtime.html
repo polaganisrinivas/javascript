@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myh1"></h1>
+    <script>
+        function counter(){
+            var count=new Date();
+            var result=document.getElementById("myh1").innerHTML=count.toLocaleTimeString();
+            document.write(result);
+        }
+        setInterval(counter,1000);
+    </script>
+</body>
+</html>

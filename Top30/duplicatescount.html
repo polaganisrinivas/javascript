@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=prompt("Enter the elements").split(",");
+        var arr1=[],count=0;
+        for(let i of arr){
+            if(arr1.indexOf(i)==-1){
+                arr1.push(i);
+            }
+            else{
+                count++;
+            }
+        }
+        document.write(count);
+    </script>
+</body>
+</html>
