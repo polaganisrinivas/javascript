@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=prompt("enter the elments").split(',');
+        var newarr=arr.map((ele)=>{
+            s=1
+            while(ele>0){
+                s*=ele;
+                ele--;
+            }
+            return s;
+        });
+        document.write(newarr);
+    </script>
+</body>
+</html>
