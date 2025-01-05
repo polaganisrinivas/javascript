@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const employees = [
+            { name: 'Alice', salary: 50000 },
+            { name: 'Bob', salary: 60000 },
+            { name: 'Charlie', salary: 40000 },
+        ];
+        let sum=employees.reduce((acc,curr)=>acc+curr.salary,0);
+        document.write(`The total Salary of all employess is : ${sum}`);
+    </script>
+</body>
+</html>

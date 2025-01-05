@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s=prompt("Enter a string");
+        var s1=s.toLowerCase().split('');
+        var vow=['a','i','e','o','u'];
+        var count=0;
+        for(let i of s1){
+            if(vow.indexOf(i)==-1){
+                continue;
+            }
+            else{
+                count++;
+            }
+        }
+        document.write(count);
+    </script>
+</body>
+</html>

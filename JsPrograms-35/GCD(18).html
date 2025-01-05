@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=parseInt(prompt("Enter first number"));
+        var b=parseInt(prompt("Enter second number"));
+        var res=a>b?b:a;
+        while(res>0){
+            if(a%res===0 && b%res===0){
+                break;
+            }
+            res--;
+        }
+        document.write(`GCD of two numbers is:${res}`);
+    </script>
+</body>
+</html>

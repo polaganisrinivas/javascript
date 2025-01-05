@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = { a: 1, b: 2, c: 3, d: 4 };
+        const keys = ['b', 'c'];
+        var res=keys.reduce((acc,curr)=>{
+            if(obj[curr]){
+                acc[curr]=obj[curr];
+            }
+            return acc
+        },{})
+        for(let i in res){
+            document.write(`${i}:${res[i]}<br>`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        background-color:hsl(0, 0%, 83%);
+    }
+    #myh1{
+        font-size: 4rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #mydiv{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        border:3px solid lightgrey;
+        border-radius: 50px;
+        padding: 30px;
+        background-color:white;
+    }
+    #display{
+        font-size: 5rem;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+    #controls button{
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding:10px 20px;
+        margin:5px;
+        border:none;
+        min-width: 125px;
+        border-radius: 15px;
+        cursor:pointer;
+        color:white;
+    }
+    #btn1{
+        background-color: hsl(120, 100%, 25%);
+    }
+    #btn2{
+        background-color: hsl(0, 92%, 40%);
+    }
+    #btn3{
+        background-color: hsl(39, 68%, 37%);
+    }
+    </style>
+</head>
+<body>
+    <h1 id="myh1">StopWatch</h1>
+    <div id="mydiv">
+        <div id="display">00:00:00:00</div>
+        <div id="controls">
+            <button id="btn1" onclick="start()">Start</button>
+            <button id="btn2" onclick="stop()">Stop</button>
+            <button id="btn3" onclick="reset()">Reset</button>
+        </div>
+    </div>
+    <script>
+        const display=document.getElementById("display");
+        let stime=0;
+        let elaptime=0;
+        let timer=null;
+        isrunning=false;
+        function start(){
+            if(!isrunning){
+                starttime=Date.now()-elaptime;
+                timer=setInterval(update,10);
+                isrunning=true;
+            }
+        }
+        function stop(){
+            if(isrunning){
+                clearInterval(timer);
+                elaptime=Date.now()-starttime;
+                isrunning=false;
+            }
+
+        }
+        function reset(){
+            clearInterval(timer);
+            starttime=0;
+            elaptime=0;
+            isrunning=false;
+            display.textContent=`00:00:00:00`;
+        }
+        function update(){
+            const currentTime=Date.now();
+            elaptime=currentTime-starttime;
+            let hours=Math.floor(elaptime/(1000*60*60));
+            let minutes=Math.floor(elaptime/(1000*60)%60);
+            let seconds=Math.floor(elaptime/1000 % 60);
+            let milliseconds=Math.floor(elaptime%100 / 10);
+            display.textContent=`${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}:${milliseconds.toString().padStart(2,'0')}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var trail=prompt("Enter head or tail");
+        trail=trail.toLowerCase();
+        let checktoss=new Promise((res,rej)=>{
+            if(trail=='head'){
+                res("You Won");
+            }
+            else{
+                rej("You Lose");
+            }
+        })
+        checktoss.then((msg)=>document.write(msg));
+        checktoss.catch((err)=>document.write(err));
+        checktoss.finally(()=>document.write("<br>ThankYou"));
+    </script>
+</body>
+</html>

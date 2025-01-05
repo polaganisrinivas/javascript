@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=prompt("Enter the elements").split(",");
+        var arr1=[];
+        for(let i of arr){
+            if(arr1.indexOf(i)==-1){
+                arr1.push(i);
+            }
+        }
+        document.write(arr1);
+    </script>
+</body>
+</html>

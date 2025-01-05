@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            displaydetails(firstName,age){
+                this.firstName=firstName;
+                this.age=age;
+            }
+        }
+        class Students extends Person{
+            constructor(Studentrollno){
+                super(firstName,age);
+                this.Studentrollno=Studentrollno;
+            }
+            displaydetails(){
+                document.write(`${this.firstName}<br>${this.age}<br>${this.Studentrollno}`);
+            }
+        }
+        var e1=new Students("Srinivas",22,35);
+        document.write(e1.displaydetails());
+    </script>
+</body>
+</html>

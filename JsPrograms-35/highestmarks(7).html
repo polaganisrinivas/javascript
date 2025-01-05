@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class details{
+            constructor(firstName,age,marks){
+                this.firstName=firstName;
+                this.age=age;
+                this.marks=marks;
+            }
+        }
+        let s1=new details("Bhaskar",27,85);
+        let s2=new details("Srinivas",22,91);
+        let s3=new details("Sai",22,83);
+        let arr=[s1,s2,s3]
+        let a=arr.reduce((acc,curr)=>{
+            if(curr.marks>acc){
+                acc=curr.marks;
+            }
+            return acc;
+        },0);
+        for(let i of arr){
+            if(i.marks==a){
+                for(let b in i){ 
+                    document.write(`${b}:${i[b]}<br>`);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

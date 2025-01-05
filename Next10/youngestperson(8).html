@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const people = [
+        { name: 'Anna', age: 25 },
+        { name: 'Mark', age: 20 },
+        { name: 'Sophia', age: 30 },
+    ];
+    var arr=people.reduce((acc,curr)=>{
+        if(!(acc<curr.age)){
+            acc=curr.age;
+        }
+        return acc;
+    },Infinity);
+    for(let i of people){
+        if(i.age==arr){
+            for(let j in i)
+                document.write(`${j}:${i[j]}<br>`);
+        }
+    }
+
+    </script>
+</body>
+</html>

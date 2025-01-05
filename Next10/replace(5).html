@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s=prompt("Enter a String");
+        var res='';
+        var vow=['a','e','i','o','u','A','E','I','O','U'];
+        function astriek(){
+            for(let i of s){
+                if(vow.indexOf(i)==-1){
+                    res+=i;
+                }
+                else{
+                    res+='*';
+                }
+            }
+            return res;
+        }
+        document.write(astriek());
+    </script>
+</body>
+</html>

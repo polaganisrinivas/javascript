@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num=parseInt(prompt("enter a number"));
+        let checkeven=new Promise((res,rej)=>{
+            if(num%2==0){
+                res("It is a even number");
+            }
+            else{
+                rej("It is an odd number");
+            }
+        })
+        checkeven.then((msg)=>document.write(msg));
+        checkeven.catch((err)=>document.write(err));
+        checkeven.finally(()=>document.write("<br>Thankyou"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=prompt("Enter elements").split(',');
+        var res=arr.reduce((acc,curr)=>{
+            if(curr%2==0){
+                acc.even.push(curr);
+            }
+            else{
+                acc.odd.push(curr);
+            }
+            return acc;
+        },{even:[],odd:[]});
+            for(let i in res){
+                document.write(`${i}:${res[i]}`);
+            }
+25,45,78
+    </script>
+</body>
+</html>

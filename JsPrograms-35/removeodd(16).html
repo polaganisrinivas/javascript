@@ -6,11 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-   <script>
-   var arr=[34,56,78,94,96,84,36];
-   var newarr=arr.reduce((acc,ele)=>acc+ele);
-   var res=Math.round(newarr/arr.length);
-   document.write(res+"<br"+newarr);
-   </script> 
+    <script>
+        var arr=prompt("Enter the elements").split(",");
+        var res=arr.filter((ele)=>ele%2==0)
+        document.write(res);
+    </script>
 </body>
 </html>

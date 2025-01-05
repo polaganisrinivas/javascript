@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=prompt("Enter array numbers").split(',');
+        var res=arr.reduce((acc,curr)=>parseInt(acc)+parseInt(curr));
+        document.write(res);
+    </script>
+</body>
+</html>

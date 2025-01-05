@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=prompt("Enter the elements").split(',');
+         var new_arr=arr.filter((ele)=>{
+            if((ele%4==0 && ele%100!=0)||(ele%400==0)){
+                return ele;
+            }
+         })
+         document.write(new_arr);
+    </script>
+</body>
+</html>
