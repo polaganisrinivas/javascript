@@ -6,24 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <label>Movie Name</label>
-        <input type="text" id="my1"></input>
-        <br><br>
-        <label>Category</label>
-        <select id="Select_Category" onchange="DisplayAmount()">
-            <option value="300">Diamod</option>
-            <option value="200">Gold</option>
-            <option value="100">Platinum</option>
-        </select>
-        <br><br>
-        <label>No.of Tickets</label>
-        <input type="number" placeholder="Enter the number" id="No_Of_Tickets">
-        <br><br>
-        <button onclick="DisplayAmount()">Book Now</button>
-        <button>Cancel</button>
-        <p id="Display_Content"></p>
-    </form>
+    <label>Movie Name</label>
+    <input type="text" id="my1"></input>
+    <br><br>
+    <label>Category</label>
+    <select id="Select_Category" onchange="DisplayAmount()">
+        <option value="300">Diamod</option>
+        <option value="200">Gold</option>
+        <option value="100">Platinum</option>
+    </select>
+    <br><br>
+    <label>No.of Tickets</label>
+    <input type="number" placeholder="Enter the number" id="No_Of_Tickets">
+    <br><br>
+    <button onclick="DisplayAmount()">Book Now</button>
+    <button>Cancel</button>
+    <p id="Display_Content"></p>
     <script>
         function DisplayAmount(){
             var price = document.getElementById("Select_Category").value
