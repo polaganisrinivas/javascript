@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Movie Name</label>
+        <input type="text" id="my1"></input>
+        <br><br>
+        <label>Category</label>
+        <select id="Select_Category" onchange="DisplayAmount()">
+            <option value="300">Diamod</option>
+            <option value="200">Gold</option>
+            <option value="100">Platinum</option>
+        </select>
+        <br><br>
+        <label>No.of Tickets</label>
+        <input type="number" placeholder="Enter the number" id="No_Of_Tickets">
+        <br><br>
+        <button onclick="DisplayAmount()">Book Now</button>
+        <button>Cancel</button>
+        <p id="Display_Content"></p>
+    </form>
+    <script>
+        function DisplayAmount(){
+            var price = document.getElementById("Select_Category").value
+            var Amount = price*parseInt(document.getElementById("No_Of_Tickets").value);
+            var name=document.getElementById("my1").value;
+            document.getElementById("Display_Content").innerHTML =`you have booked movie tickets for the movie ${name} worth ${Amount}`;
+        }
+    </script>
+</body>
+</html>
